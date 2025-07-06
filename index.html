@@ -2,40 +2,193 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Five Buttons Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Posts - Kawaii PanicX</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Custom CSS for the page */
         body {
-            font-family: Arial, sans-serif;
-            margin: 30px;
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a; /* Dark background */
+            color: #ffffff; /* White text */
+            margin: 0;
+            padding: 1rem 0.5rem; /* Padding around the content, slightly less on sides for mobile */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden; /* Ensure no horizontal scroll */
         }
-        .button-group {
-            display: block;
-            gap: 15px;
+        @media (min-width: 640px) { /* sm breakpoint */
+            body {
+                padding: 1.5rem 1rem;
+            }
         }
-        button {
-            padding: 12px 24px;
-            margin:10px;
-            font-size: 16px;
-            cursor: pointer;
-            border: none;
-            background: #8ab4f8;
-            color: #fff;
-            border-radius: 5px;
-            transition: background 0.2s;
+        @media (min-width: 1024px) { /* lg breakpoint */
+            body {
+                padding: 2rem;
+            }
         }
-        button:hover {
-            background: #357ae8;
+
+        /* Custom scrollbar for better aesthetics if content overflows */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #2a2a2a;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #667eea;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7f9cf5;
         }
     </style>
 </head>
 <body>
-    <h2>Five Buttons Example</h2>
-    <div class="button-group">
-        <button id="button1">Button 1</button>
-        <button id="button2">Button 2</button>
-        <button id="button3">Button 3</button>
-        <button id="button4">Button 4</button>
-        <button id="button5">Button 5</button>
+
+    <div class="w-full max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto py-4 px-2 sm:px-4">
+        <!-- Section Title -->
+        <div class="bg-gray-800 rounded-2xl p-4 sm:p-5 mb-8 shadow-xl border border-gray-700">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-center text-white uppercase tracking-wider leading-tight">LATEST POSTS</h2>
+        </div>
+
+        <!-- Posts Container -->
+        <div class="space-y-6 sm:space-y-8">
+            <!-- Post Item 1 -->
+            <a href="#" class="group block bg-gray-800 rounded-2xl shadow-lg border border-gray-700 overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:bg-gray-700 hover:border-gray-500">
+                <div class="flex flex-col items-center p-4 sm:p-5">
+                    <div class="flex-shrink-0 w-full max-w-[160px] h-40 sm:h-36 lg:h-40 mb-4 rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-shadow duration-300">
+                        <img src="https://placehold.co/160x160/FF69B4/ffffff?text=Post+01" alt="Post Image 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow text-center">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2 leading-snug group-hover:text-gray-300 transition-colors duration-300">Fresh Picks: 10 New Anime Series Launching in 2025</h3>
+                        <p class="text-sm sm:text-base text-gray-400">by Marko Jovanovic | July 1, 2025</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post Item 2 -->
+            <a href="#" class="group block bg-gray-800 rounded-2xl shadow-lg border border-gray-700 overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:bg-gray-700 hover:border-gray-500">
+                <div class="flex flex-col items-center p-4 sm:p-5">
+                    <div class="flex-shrink-0 w-full max-w-[160px] h-40 sm:h-36 lg:h-40 mb-4 rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-shadow duration-300">
+                        <img src="https://placehold.co/160x160/8A2BE2/ffffff?text=Post+02" alt="Post Image 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow text-center">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2 leading-snug group-hover:text-gray-300 transition-colors duration-300">A Season of Sequels: 16 Anime Making Their Return</h3>
+                        <p class="text-sm sm:text-base text-gray-400">by Marko Jovanovic | June 28, 2025</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post Item 3 -->
+            <a href="#" class="group block bg-gray-800 rounded-2xl shadow-lg border border-gray-700 overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:bg-gray-700 hover:border-gray-500">
+                <div class="flex flex-col items-center p-4 sm:p-5">
+                    <div class="flex-shrink-0 w-full max-w-[160px] h-40 sm:h-36 lg:h-40 mb-4 rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-shadow duration-300">
+                        <img src="https://placehold.co/160x160/00CED1/ffffff?text=Post+03" alt="Post Image 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow text-center">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2 leading-snug group-hover:text-gray-300 transition-colors duration-300">Canceled Manga Returning As Anime Productions Get Support</h3>
+                        <p class="text-sm sm:text-base text-gray-400">by Chike Nwaenie | June 25, 2025</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post Item 4 -->
+            <a href="#" class="group block bg-gray-800 rounded-2xl shadow-lg border border-gray-700 overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:bg-gray-700 hover:border-gray-500">
+                <div class="flex flex-col items-center p-4 sm:p-5">
+                    <div class="flex-shrink-0 w-full max-w-[160px] h-40 sm:h-36 lg:h-40 mb-4 rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-shadow duration-300">
+                        <img src="https://placehold.co/160x160/FFD700/000000?text=Post+04" alt="Post Image 4" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow text-center">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2 leading-snug group-hover:text-gray-300 transition-colors duration-300">Top 5 Underrated Anime Gems You Need to Watch Now</h3>
+                        <p class="text-sm sm:text-base text-gray-400">by Emily Chen | June 20, 2025</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post Item 5 -->
+            <a href="#" class="group block bg-gray-800 rounded-2xl shadow-lg border border-gray-700 overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:bg-gray-700 hover:border-gray-500">
+                <div class="flex flex-col items-center p-4 sm:p-5">
+                    <div class="flex-shrink-0 w-full max-w-[160px] h-40 sm:h-36 lg:h-40 mb-4 rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-shadow duration-300">
+                        <img src="https://placehold.co/160x160/ADFF2F/000000?text=Post+05" alt="Post Image 5" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow text-center">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2 leading-snug group-hover:text-gray-300 transition-colors duration-300">The Evolution of Anime Art Styles Over the Decades</h3>
+                        <p class="text-sm sm:text-base text-gray-400">by David Lee | June 15, 2025</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post Item 6 -->
+            <a href="#" class="group block bg-gray-800 rounded-2xl shadow-lg border border-gray-700 overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:bg-gray-700 hover:border-gray-500">
+                <div class="flex flex-col items-center p-4 sm:p-5">
+                    <div class="flex-shrink-0 w-full max-w-[160px] h-40 sm:h-36 lg:h-40 mb-4 rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-shadow duration-300">
+                        <img src="https://placehold.co/160x160/FF4500/ffffff?text=Post+06" alt="Post Image 6" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow text-center">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2 leading-snug group-hover:text-gray-300 transition-colors duration-300">Upcoming Anime Games to Look Forward to in 2025</h3>
+                        <p class="text-sm sm:text-base text-gray-400">by Sarah Kim | June 10, 2025</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post Item 7 -->
+            <a href="#" class="group block bg-gray-800 rounded-2xl shadow-lg border border-gray-700 overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:bg-gray-700 hover:border-gray-500">
+                <div class="flex flex-col items-center p-4 sm:p-5">
+                    <div class="flex-shrink-0 w-full max-w-[160px] h-40 sm:h-36 lg:h-40 mb-4 rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-shadow duration-300">
+                        <img src="https://placehold.co/160x160/9370DB/ffffff?text=Post+07" alt="Post Image 7" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow text-center">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2 leading-snug group-hover:text-gray-300 transition-colors duration-300">Behind the Scenes: The Making of a Popular Anime Episode</h3>
+                        <p class="text-sm sm:text-base text-gray-400">by Alex Johnson | June 5, 2025</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post Item 8 -->
+            <a href="#" class="group block bg-gray-800 rounded-2xl shadow-lg border border-gray-700 overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:bg-gray-700 hover:border-gray-500">
+                <div class="flex flex-col items-center p-4 sm:p-5">
+                    <div class="flex-shrink-0 w-full max-w-[160px] h-40 sm:h-36 lg:h-40 mb-4 rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-shadow duration-300">
+                        <img src="https://placehold.co/160x160/32CD32/ffffff?text=Post+08" alt="Post Image 8" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow text-center">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2 leading-snug group-hover:text-gray-300 transition-colors duration-300">Anime Conventions: A Guide to Your First Experience</h3>
+                        <p class="text-sm sm:text-base text-gray-400">by Maria Garcia | May 30, 2025</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post Item 9 -->
+            <a href="#" class="group block bg-gray-800 rounded-2xl shadow-lg border border-gray-700 overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:bg-gray-700 hover:border-gray-500">
+                <div class="flex flex-col items-center p-4 sm:p-5">
+                    <div class="flex-shrink-0 w-full max-w-[160px] h-40 sm:h-36 lg:h-40 mb-4 rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-shadow duration-300">
+                        <img src="https://placehold.co/160x160/FF8C00/ffffff?text=Post+09" alt="Post Image 9" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow text-center">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2 leading-snug group-hover:text-gray-300 transition-colors duration-300">The Impact of Anime on Global Pop Culture</h3>
+                        <p class="text-sm sm:text-base text-gray-400">by Kenji Tanaka | May 25, 2025</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post Item 10 -->
+            <a href="#" class="group block bg-gray-800 rounded-2xl shadow-lg border border-gray-700 overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:bg-gray-700 hover:border-gray-500">
+                <div class="flex flex-col items-center p-4 sm:p-5">
+                    <div class="flex-shrink-0 w-full max-w-[160px] h-40 sm:h-36 lg:h-40 mb-4 rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-shadow duration-300">
+                        <img src="https://placehold.co/160x160/4682B4/ffffff?text=Post+10" alt="Post Image 10" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow text-center">
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2 leading-snug group-hover:text-gray-300 transition-colors duration-300">Exploring the Different Subgenres of Isekai Anime</h3>
+                        <p class="text-sm sm:text-base text-gray-400">by Olivia White | May 20, 2025</p>
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
+
 </body>
 </html>
