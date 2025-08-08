@@ -1,4 +1,5 @@
-   const pageRoutes = {
+alert("Routes");
+const pageRoutes = {
         '/': '/home.html',
         '/home': '/home.html',
         '/news': '/news.html',
